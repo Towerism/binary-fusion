@@ -1,3 +1,9 @@
 import { Engine } from "excalibur";
 
-const game = new Engine();
+const game = new Engine({
+  width: 800,
+  height: 600
+});
+
+game.start();
+console.log("started!");
