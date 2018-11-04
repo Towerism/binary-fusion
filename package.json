@@ -6,6 +6,8 @@
   "repository": "git@github.com:Towerism/binary-fusion",
   "author": "Martin Fracker, Jr. <martin.frackerjr@gmail.com>",
   "scripts": {
+    "typecheck": "tsc --noEmit src/index.ts",
+    "build": "yarn typecheck && parcel build index.html",
     "dev": "parcel serve index.html"
   },
   "license": "AGPL-3.0-or-later",
@@ -21,7 +23,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "yarn typecheck && pretty-quick --staged"
     }
   }
 }
