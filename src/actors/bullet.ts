@@ -10,5 +10,8 @@ export class Bullet extends Actor {
     this.setHeight(10);
     this.color = Color.Chartreuse;
     this.vel = this.speed.scale(this.direction);
+    this.on("exitviewport", () => {
+      this.kill();
+    });
   }
 }
