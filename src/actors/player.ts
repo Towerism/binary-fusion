@@ -1,4 +1,5 @@
 import { Actor, Color, Engine, Input, Vector } from "excalibur";
+import { Bullet } from "./bullet";
 
 export class Player extends Actor {
   static readonly speed: Vector = new Vector(250, 250);
@@ -23,6 +24,10 @@ export class Player extends Actor {
     }
     if (engine.input.keyboard.isHeld(Input.Keys.Right)) {
       this.vel.x = Player.speed.x;
+    }
+    if (engine.input.keyboard.wasPressed(Input.Keys.Z)) {
+      const bullet = new Bullet(this.pos.x, this.pos.y);
+      engine.add(bullet);
     }
     super.update(engine, delta);
   }
