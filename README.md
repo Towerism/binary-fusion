@@ -5,6 +5,7 @@
 # License
 
 Binary Fusion is a shoot 'em up inspired by Ikaruga.
+
 Copyright (C) 2018 Martin Fracker, Jr.
 
 This program is free software: you can redistribute it and/or modify it under
