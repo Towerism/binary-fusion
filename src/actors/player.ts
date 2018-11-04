@@ -1,7 +1,7 @@
 import { Actor, Color, Engine, Input, Vector } from "excalibur";
 
 export class Player extends Actor {
-  static readonly speed: Vector = new Vector(5, 5);
+  static readonly speed: Vector = new Vector(250, 250);
 
   constructor(x: number, y: number) {
     super(x, y);
@@ -24,6 +24,6 @@ export class Player extends Actor {
     if (engine.input.keyboard.isHeld(Input.Keys.Right)) {
       this.vel.x = Player.speed.x;
     }
-    this.pos.addEqual(this.vel);
+    super.update(engine, delta);
   }
 }
