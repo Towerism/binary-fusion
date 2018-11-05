@@ -1,12 +1,12 @@
 import { Actor, Color, Engine, Input, Vector, CollisionType } from "excalibur";
 import { Bullet } from "./bullet";
 
-export class Player extends Actor {
-  constructor() {
-    super();
+export class Enemy extends Actor {
+  constructor(x: number, y: number) {
+    super(x, y);
     this.setWidth(40);
     this.setHeight(40);
-    this.color = Color.Chartreuse;
+    this.color = Color.Red;
     this.collisionType = CollisionType.Fixed;
   }
 }

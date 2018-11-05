@@ -1,4 +1,4 @@
-import { Actor, Engine, Color, Vector } from "excalibur";
+import { Actor, Engine, Color, Vector, CollisionType } from "excalibur";
 
 export class Bullet extends Actor {
   direction = -1;
@@ -11,6 +11,11 @@ export class Bullet extends Actor {
     this.color = Color.Chartreuse;
     this.vel = this.speed.scale(this.direction);
     this.on("exitviewport", () => {
+      this.kill();
+    });
+    this.collisionType = CollisionType.Active;
+    this.on("collisionstart", event => {
+      event.other.kill();
       this.kill();
     });
   }
