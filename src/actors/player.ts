@@ -7,6 +7,6 @@ export class Player extends Actor {
     this.setWidth(40);
     this.setHeight(40);
     this.color = Color.Chartreuse;
-    this.collisionType = CollisionType.Fixed;
+    this.collisionType = CollisionType.Active;
   }
 }

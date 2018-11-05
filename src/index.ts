@@ -1,21 +1,19 @@
 import {
   Engine,
-  Physics,
   CollisionResolutionStrategy,
   Actor,
   Color,
   CollisionType,
   Loader
 } from "excalibur";
+
 import { Enemy } from "./actors/enemy";
 import { makePlayer } from "./factories/make-player";
+
 const game = new Engine({
   width: 800,
   height: 600
 });
-
-Physics.enabled = true;
-Physics.collisionResolutionStrategy = CollisionResolutionStrategy.Box;
 
 const hmr = module["hot"];
 if (hmr) {

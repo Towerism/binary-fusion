@@ -13,7 +13,7 @@ export class Bullet extends Actor {
     this.on("exitviewport", () => {
       this.kill();
     });
-    this.collisionType = CollisionType.Active;
+    this.collisionType = CollisionType.Passive;
     this.on("collisionstart", event => {
       event.other.kill();
       this.kill();

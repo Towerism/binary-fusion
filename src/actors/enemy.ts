@@ -7,6 +7,6 @@ export class Enemy extends Actor {
     this.setWidth(40);
     this.setHeight(40);
     this.color = Color.Red;
-    this.collisionType = CollisionType.Fixed;
+    this.collisionType = CollisionType.Active;
   }
 }
